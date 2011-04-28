@@ -1,0 +1,101 @@
+//
+//	Black Jack Strategy Grid
+//
+// 	;; line is dealer's card (dimension 3)
+//  ;# line is table break
+// 	# line is row labels (leftmost column)
+// 	subsequent lines are rows of strategy
+// 	values are as follows:
+//		s: stay
+//		h: hit
+//		d: double down
+// 		p:split
+//	smart players never take insurance
+//
+// should create 3 tables from this:
+// 2 are 3 dimensions (one for each of your cards, and one for dealer's card)
+// 1 is 2 dimensions (one for your score, one for dealer's card)
+// 
+// initial evaluation can use any table. after hitting, subsequent evaluations
+// will only use sum table, as the logic can get a little hairy otherwise
+//
+// created on 4/26/2011 by Tyler Ambroziak
+//
+;;dealer showing this
+2,3,4,5,6,7,8,9,10,A
+;#table 1: single aces
+#A-10,A-9,A-8,A-7,A-6,A-5,A-4,A-3,A-2
+//A-10
+s,s,s,s,s,s,s,s,s,s
+//A-9
+s,s,s,s,s,s,s,s,s,s
+//A-8
+s,s,s,s,s,s,s,s,s,s
+//A-7
+s,d,d,d,d,s,s,h,h,h
+//A-6
+h,d,d,d,d,h,h,h,h,h
+//A-5
+h,h,d,d,d,h,h,h,h,h
+//A-4
+h,h,d,d,d,h,h,h,h,h
+//A-3
+h,h,h,d,d,h,h,h,h,h
+//A-2
+h,h,h,d,d,h,h,h,h,h
+;#table 2: pairs
+#A-A,8-8,10-10,9-9,7-7,6-6,5-5,4-4,3-3,2-2
+//A-A
+p,p,p,p,p,p,p,p,p,p
+//8-8
+p,p,p,p,p,p,p,p,p,p
+//10-10
+s,s,s,s,s,s,s,s,s,s
+//9-9
+p,p,p,p,p,s,p,p,s,s
+//7-7
+p,p,p,p,p,p,h,h,h,h
+//6-6
+h,p,p,p,p,h,h,h,h,h
+//5-5
+d,d,d,d,d,d,d,d,h,h
+//4-4
+h,h,h,h,h,h,h,h,h,h
+//3-3
+h,h,p,p,p,h,h,h,h,h
+//2-2
+h,h,p,p,p,h,h,h,h,h
+;#table 3: sums
+#20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5
+//20
+s,s,s,s,s,s,s,s,s,s
+//19
+s,s,s,s,s,s,s,s,s,s
+//18
+s,s,s,s,s,s,s,s,s,s
+//17
+s,s,s,s,s,s,s,s,s,s
+//16
+s,s,s,s,s,h,h,h,h,h
+//15
+s,s,s,s,s,h,h,h,h,h
+//14
+s,s,s,s,s,h,h,h,h,h
+//13
+s,s,s,s,s,h,h,h,h,h
+//12
+h,h,s,s,s,h,h,h,h,h
+//11
+d,d,d,d,d,d,d,d,d,h
+//10
+d,d,d,d,d,d,d,d,h,h
+//9
+h,d,d,d,d,h,h,h,h,h
+//8
+h,h,h,h,h,h,h,h,h,h
+//7
+h,h,h,h,h,h,h,h,h,h
+//6
+h,h,h,h,h,h,h,h,h,h
+//5
+h,h,h,h,h,h,h,h,h,h
