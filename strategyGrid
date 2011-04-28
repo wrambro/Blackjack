@@ -3,8 +3,6 @@
 //
 // 	;; line is dealer's card (dimension 3)
 //  ;# line is table break
-// 	# line is row labels (leftmost column)
-// 	subsequent lines are rows of strategy
 // 	values are as follows:
 //		s: stay
 //		h: hit
@@ -22,9 +20,9 @@
 // created on 4/26/2011 by Tyler Ambroziak
 //
 ;;dealer showing this
-2,3,4,5,6,7,8,9,10,A
-;#table 1: single aces
-#A-10,A-9,A-8,A-7,A-6,A-5,A-4,A-3,A-2
+2,3,4,5,6,7,8,9,10,11
+;#table 1: single aces (non-ace card)
+10,9,8,7,6,5,4,3,2
 //A-10
 s,s,s,s,s,s,s,s,s,s
 //A-9
@@ -44,7 +42,7 @@ h,h,h,d,d,h,h,h,h,h
 //A-2
 h,h,h,d,d,h,h,h,h,h
 ;#table 2: pairs
-#A-A,8-8,10-10,9-9,7-7,6-6,5-5,4-4,3-3,2-2
+11,8,10,9,7,6,5,4,3,2
 //A-A
 p,p,p,p,p,p,p,p,p,p
 //8-8
@@ -66,7 +64,7 @@ h,h,p,p,p,h,h,h,h,h
 //2-2
 h,h,p,p,p,h,h,h,h,h
 ;#table 3: sums
-#20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5
+20,19,18,17,16,15,14,13,12,11,10,9,8,7,6,5
 //20
 s,s,s,s,s,s,s,s,s,s
 //19
