@@ -2,9 +2,10 @@ package tma.deck.card;
 
 /**
  * Rank class is an enum for all card ranks. The only other method
- * is convert(), which returns the Rank with the passed-in enum value
+ * is convert(), which returns the Rank with the passed-in enum value.
+ * 
  * @author Tyler Ambroziak
- *
+ * @version 1.0
  */
 public enum Rank {
 	Joker, Ace, Two, Three, Four, Five, Six,

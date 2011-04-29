@@ -5,6 +5,7 @@ package tma.deck.card;
  * Blackjack, but other values are welcome. When adding a value here, make sure
  * to add appropriate logic in the Card class' compareTo() method.
  * @author Tyler Ambroziak
+ * @version 1.0
  *
  */
 public enum CardContext {

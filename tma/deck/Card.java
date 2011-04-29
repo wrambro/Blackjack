@@ -6,7 +6,9 @@ import tma.deck.card.*;
 /**
  * Card class represents a playing card. Stores info about the rank, suit, and
  * what game/context that card is being used in
+ * 
  * @author Tyler Ambroziak
+ * @version 1.0
  *
  */
 @SuppressWarnings("unchecked")
@@ -72,6 +74,7 @@ public class Card implements Comparable {
 	
 	/**
 	 * Returns display name of card (i.e. 10 of Clubs, Jack of Diamonds)
+	 * @return Description of card
 	 */
 	public String toString() {
 		return getDisplayRank() + " of " + getDisplaySuit();
@@ -79,7 +82,10 @@ public class Card implements Comparable {
 	
 	/**
 	 * Comparable implementation. Context dependent. For blackjack, determines
-	 * card order based on the cardValue method in the BJController class
+	 * card order based on the cardValue method in the BJController class. Other
+	 * contexts are yet to be defined
+	 * @param o Object to compare this to
+	 * @return Difference between two card values
 	 */
 	public int compareTo(Object o) {
 		if (o.getClass() != this.getClass()) return -1;

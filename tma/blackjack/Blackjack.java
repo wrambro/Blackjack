@@ -2,6 +2,12 @@ package tma.blackjack;
 import tma.deck.*;
 import tma.deck.card.*;
 
+/**
+ * The Blackjack class serves as the entrypoint for the CLI version of this game.
+ * 
+ * @author Tyler Ambroziak
+ * @version 1.0
+ */
 public class Blackjack {
 	public static void main(String[] args) {
 		// create players, deck

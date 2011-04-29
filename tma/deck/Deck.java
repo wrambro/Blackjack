@@ -8,7 +8,9 @@ import tma.deck.card.*;
  * (assuming 52 cards in a deck). Tracks active cards, burned cards, and the 
  * CardContext of the deck. Also contains basic logic for shuffling, drawing,
  * and burning cards.
+ * 
  * @author Tyler Ambroziak
+ * @version 1.0
  *
  */
 public class Deck {
